@@ -19,6 +19,11 @@ resource "azurerm_resource_group" "rg" {
   location = "Canada Central"
 }
 
+resource "azurerm_resource_group" "a12_rg" {
+  name     = "enca0002-a12-rg"
+  location = "Canada Central"
+}
+
 resource "azurerm_storage_account" "sa" {
   name                     = "enca0002githubactions"
   resource_group_name      = azurerm_resource_group.rg.name
@@ -48,7 +53,7 @@ output "container_name" {
   value = azurerm_storage_container.sc.name
 }
 
-output "primary_access_key" {
+output "arm_access_key" {
   value = azurerm_storage_account.sa.primary_access_key
   sensitive = true
 }
