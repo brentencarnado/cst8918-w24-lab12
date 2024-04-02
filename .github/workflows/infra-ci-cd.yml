@@ -176,7 +176,6 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: tfplan
-        path: .
 
     - name : Display structure of downloaded files
       run: ls
@@ -184,3 +183,4 @@ jobs:
     # Terraform Apply
     - name: Terraform Apply
       run: terraform apply -auto-approve tfplan
+      working-directory: /home/runner/work/cst8918-w24-lab12/cst8918-w24-lab12
