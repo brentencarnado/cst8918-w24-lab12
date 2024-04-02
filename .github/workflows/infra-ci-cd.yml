@@ -84,6 +84,9 @@ jobs:
     - name: Terraform Format
       run: terraform fmt -check
 
+    - name : Import resource group
+      run : terraform import module.actual_main.azurerm_resource_group.rg /subscriptions/***/resourceGroups/enca0002-githubactions-rg
+
     # Generates an execution plan for Terraform
     # An exit code of 0 indicated no changes, 1 a terraform failure, 2 there are pending changes.
     - name: Terraform Plan
