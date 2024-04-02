@@ -20,10 +20,6 @@ resource "azurerm_resource_group" "rg" {
   location = "Canada Central"
 }
 
-resource "azurerm_resource_group" "a12_rg" {
-  name     = "enca0002-a12-rg"
-  location = "Canada Central"
-}
 
 resource "azurerm_storage_account" "sa" {
   name                     = "enca0002githubactions"
