@@ -177,6 +177,9 @@ jobs:
       with:
         name: tfplan
 
+    - name : Display structure of downloaded files
+      run: ls
+
     # Terraform Apply
     - name: Terraform Apply
       run: terraform apply -auto-approve tfplan
