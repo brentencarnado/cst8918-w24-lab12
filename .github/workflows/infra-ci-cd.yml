@@ -181,10 +181,6 @@ jobs:
     - name : Display structure of downloaded files
       run: ls tfplan
 
-    - name : Import resource group
-      run : terraform import module.actual_main.azurerm_resource_group.rg /subscriptions/***/resourceGroups/enca0002-githubactions-rg
-
-
     # Terraform Apply
     - name: Terraform Apply
       run: terraform apply -auto-approve tfplan/tfplan
