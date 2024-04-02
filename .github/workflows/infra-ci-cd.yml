@@ -106,7 +106,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: tfplan
-        path: tfplan
+        path: /infra/tf-app/tfplan
         
     # Create string output of Terraform Plan
     - name: Create String Output
@@ -148,7 +148,6 @@ jobs:
                 repo: context.repo.repo,
                 body: body
             })
-
 
 
 # This will only run if the terraform plan has changes, and when the PR is approved and merged to main.
