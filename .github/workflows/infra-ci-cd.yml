@@ -179,8 +179,8 @@ jobs:
         path: ./infra/tf-app/tfplan
 
     - name : Display structure of downloaded files
-      run: ls
+      run: ls -la
 
     # Terraform Apply
     - name: Terraform Apply
-      run: terraform apply -auto-approve tfplan
+      run: terraform apply -auto-approve ./tfplan
